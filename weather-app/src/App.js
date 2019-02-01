@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-const Index = () => <h2>Home</h2>;
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Monday from './pages/Monday.js';
+import Thuesday from './pages/Thuesday';
+import Wednsday from './pages/Wednsday';
 
 class App extends Component {
   constructor(props) {
@@ -14,25 +15,20 @@ class App extends Component {
 
   handleClick = (actualWeather) => (e) => {
     this.setState({actualDegree: actualWeather}); 
-    //console.log('Event', e);
-    //console.log('Parameter', actualWeather);
+    
+    //console.log('Parameter', actualWeather); //paramenter get from function call
   }
 
   render() {
-    let title = '';
-    if(this.state.actualDegree !== ''){
-      title = 
-      <div className="actualWeather">
-          <img alt="tempoAttuale" src="//ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"/>
-          <span className="actualDegree">{this.state.actualDegree}</span>
-          <span className="logoDegree">°C</span>
-      </div>
-    }     
     const dataWeather = this.props.data;
     const days = [];
     dataWeather.forEach(dayElement => {
       days.push(
-        <li key={dayElement.day} onClick={this.handleClick(dayElement.now)}>
+        <li key={dayElement.day} >
+          <Link 
+          to={"/"+dayElement.day+"/"+dayElement.now} 
+          onClick={this.handleClick(dayElement.now)} 
+          className="noDecoration">
             <span className="day">{dayElement.day}</span>
             <span className="weatherImg">
               <img alt={dayElement.day} src={"//ssl.gstatic.com/onebox/weather/64/"+dayElement.img+".png"}/>
@@ -41,16 +37,23 @@ class App extends Component {
               <span className="d_first">{dayElement.d_max}°</span>
               <span className="d_second">{dayElement.d_min}°</span>
             </span>
+          </Link>  
           </li>
       );
     });
     return (
-      <div>
-        {title}
-        <ul className="weatherBox">
-          {days}
-        </ul>
-      </div>
+      <Router>
+        <div>          
+          <ul className="weatherBox">
+            {days}
+          </ul>
+          <Switch>
+            <Route path="/mon/:degree" component={Monday} />
+            <Route path="/tue/:degree" component={Thuesday} />
+            <Route path="/wed/:degree" component={Wednsday} />
+          </Switch>          
+        </div>        
+      </Router>      
     );
   }
 }

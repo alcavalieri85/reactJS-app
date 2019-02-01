@@ -75,3 +75,8 @@ ul.weatherBox li:hover {
   margin: 10px 0px;
   color: #212121;
 }
+
+/*Link*/
+.noDecoration{
+  text-decoration: none;
+}
