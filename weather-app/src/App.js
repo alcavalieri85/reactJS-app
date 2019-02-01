@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+const Index = () => <h2>Home</h2>;
 
 class App extends Component {
   constructor(props) {
