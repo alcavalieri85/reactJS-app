@@ -7,8 +7,10 @@ ul.weatherBox li {
   width: 73px;
   padding-bottom: 5px;
   cursor: pointer;  
-  margin: 80px 0px 0px 0px;
+  /*margin: 80px 0px 0px 0px;*/
   text-align: center;
+  position: relative;
+  top: 200px;
 }
 
 ul.weatherBox li:hover {
@@ -51,9 +53,6 @@ ul.weatherBox li:hover {
   color: #bababa
 }
 
-.actualWeather{
-  display: block;
-}
 
 .actualWeather img{
   float: left;
@@ -74,6 +73,12 @@ ul.weatherBox li:hover {
   font-size: 16px;
   margin: 10px 0px;
   color: #212121;
+}
+
+.actualBox{
+  position: absolute;
+  top: 10px;
+  margin-left: 50px;
 }
 
 /*Link*/

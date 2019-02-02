@@ -6,7 +6,7 @@ class Monday extends Component {
         const degree = this.props.match.params.degree;
         //console.log(this.props.match.params.degree);
         return(
-        <div>
+        <div className="actualBox">
             <h1>Monday</h1>
             <div className="actualWeather">
                 <img alt="tempoAttuale" src="//ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"/>
