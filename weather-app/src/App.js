@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Monday from './pages/Monday.js';
 import Thuesday from './pages/Thuesday';
 import Wednsday from './pages/Wednsday';
+import Header from './pages/Header.js';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCloudSunRain } from '@fortawesome/free-solid-svg-icons';
 
 class App extends Component {
   constructor(props) {
@@ -42,20 +45,26 @@ class App extends Component {
       );
     });
     return (
-      <Router>
-        <div>          
-          <ul className="weatherBox">
-            {days}
-          </ul>
-          <Switch>
-            <Route path="/mon/:degree" component={Monday} />
-            <Route path="/tue/:degree" component={Thuesday} />
-            <Route path="/wed/:degree" component={Wednsday} />
-          </Switch>          
-        </div>        
-      </Router>      
+      <div>
+        <Header />
+        <Router>
+          <div>          
+            <ul className="weatherBox">
+              {days}
+            </ul>
+            <Switch>
+              <Route path="/mon/:degree" component={Monday} />
+              <Route path="/tue/:degree" component={Thuesday} />
+              <Route path="/wed/:degree" component={Wednsday} />
+            </Switch>          
+          </div>        
+        </Router>
+      </div>
+            
     );
   }
 }
 
 export default App;
+
+library.add(faCloudSunRain);
