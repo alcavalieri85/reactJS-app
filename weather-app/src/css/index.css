@@ -55,4 +55,23 @@ body{
     background: url("../img/weather-background.jpg") center center no-repeat;
     background-size: cover;
     color: #EAE9E9;
+    overflow: hidden;
+    line-height: 0.5;
+}
+
+.banner h1{
+    padding: .55rem 0;
+    font-size: 4.44rem;
+    letter-spacing: 2px;
+    font-family: 'Indie Flower', Arial, serif;
+    font-weight: 500px;
+    border-bottom: 0.1rem solid #EAE9E9;
+}
+
+.banner h2{
+    padding-top: 1.11rem;
+    font-size: 2rem;
+    font-weight: 900px;
+    font-family: 'Indie Flower', Arial, serif;
+    text-transform: lowercase;
 }

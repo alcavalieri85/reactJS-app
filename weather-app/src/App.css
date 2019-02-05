@@ -1,4 +1,8 @@
 /*Weater Box*/
+.weatherBox{
+  display: flex;
+  justify-content: center;
+}
 
 ul.weatherBox li {
   display: inline-block;
@@ -7,10 +11,9 @@ ul.weatherBox li {
   width: 73px;
   padding-bottom: 5px;
   cursor: pointer;  
-  /*margin: 80px 0px 0px 0px;*/
   text-align: center;
   position: relative;
-  top: 200px;
+  margin: 8rem 0rem;
 }
 
 ul.weatherBox li:hover {
@@ -77,8 +80,8 @@ ul.weatherBox li:hover {
 
 .actualBox{
   position: absolute;
-  top: 10px;
-  margin-left: 50px;
+  top: 55rem;
+  right: 50px;
 }
 
 /*Link*/
