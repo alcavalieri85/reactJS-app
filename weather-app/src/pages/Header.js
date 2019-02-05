@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Header extends Component {
-    render() {
+    render() {        
         return (
-            <div className="container">
+            <div>
             <nav className="header">
                 <span className="logo"><FontAwesomeIcon icon="cloud-sun-rain"/> app-weather</span>
                 <ul>

@@ -11,8 +11,8 @@ html {
     font-size: 18px;
   }
 
-.container{
-    position: relative;
+body{
+    height: 100%;
 }
 
 /*HEADER*/
@@ -43,4 +43,16 @@ html {
 .header li a {
     text-decoration: none;
     color: #4a4a4a;
+}
+
+/*BANNER*/
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    background: url("../img/weather-background.jpg") center center no-repeat;
+    background-size: cover;
+    color: #EAE9E9;
 }
