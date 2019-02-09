@@ -5,6 +5,7 @@ import Monday from './pages/Monday.js';
 import Thuesday from './pages/Thuesday';
 import Wednsday from './pages/Wednsday';
 import Header from './pages/Header.js';
+import Footer from './pages/Footer.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCloudSunRain } from '@fortawesome/free-solid-svg-icons';
 
@@ -59,6 +60,7 @@ class App extends Component {
             </Switch>          
           </div>        
         </Router>
+        <Footer />
       </div>
             
     );
