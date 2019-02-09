@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Monday from './pages/Monday.js';
+import { Route, Link } from "react-router-dom";
+import Monday from './pages/Monday';
 import Thuesday from './pages/Thuesday';
 import Wednsday from './pages/Wednsday';
-import Header from './pages/Header.js';
-import Footer from './pages/Footer.js';
+import Header from './pages/Header';
+import Footer from './pages/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCloudSunRain } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,8 +19,8 @@ class App extends Component {
 
   handleClick = (actualWeather) => (e) => {
     this.setState({actualDegree: actualWeather}); 
+    //console.log('Parameter', actualWeather); //paramenter get from function call  
     
-    //console.log('Parameter', actualWeather); //paramenter get from function call
   }
 
   render() {
@@ -48,18 +48,14 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Router>
           <div>          
             <ul className="weatherBox">
               {days}
             </ul>
-            <Switch>
-              <Route path="/mon/:degree" component={Monday} />
-              <Route path="/tue/:degree" component={Thuesday} />
-              <Route path="/wed/:degree" component={Wednsday} />
-            </Switch>          
-          </div>        
-        </Router>
+              <Route path="/Mon/:degree" component={Monday} />
+              <Route path="/Tue/:degree" component={Thuesday} />
+              <Route path="/Wed/:degree" component={Wednsday} />                    
+          </div>   
         <Footer />
       </div>
             
