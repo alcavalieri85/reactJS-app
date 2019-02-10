@@ -28,14 +28,14 @@ class App extends Component {
     const days = [];
     dataWeather.forEach(dayElement => {
       days.push(
-        <li key={dayElement.day} >
+        <li key={dayElement.id} >
           <Link 
           to={"/"+dayElement.day+"/"+dayElement.now} 
           onClick={this.handleClick(dayElement.now)} 
           className="noDecoration">
             <span className="day">{dayElement.day}</span>
             <span className="weatherImg">
-              <img alt={dayElement.day} src={"//ssl.gstatic.com/onebox/weather/64/"+dayElement.img+".png"}/>
+              <img alt={dayElement.day} src={" http://openweathermap.org/img/w/"+dayElement.img+".png"}/>
             </span>
             <span className="degree">
               <span className="d_first">{dayElement.d_max}°</span>
