@@ -8,7 +8,7 @@ class Footer extends Component {
         return (
             <footer>
                     <h3>copyright Alfonso Cavalieri</h3>
-                    <h5>photo by <Link to="www.visualhunt.com">VisualHunt</Link></h5>
+                    <h5>photo by <Link to="../https://visualhunt.com/">VisualHunt</Link></h5>
             </footer>        
         );        
     }

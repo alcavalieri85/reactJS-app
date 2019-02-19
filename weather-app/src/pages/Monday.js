@@ -4,7 +4,7 @@ import '../App.css';
 class Monday extends Component {
     render() {
         const degree = this.props.match.params.degree;
-        //console.log(this.props.match.params.degree);
+        console.log(this.props.match.params.degree);
         return(
         <div className="actualBox">
             <h1>Monday</h1>

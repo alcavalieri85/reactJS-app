@@ -45,9 +45,9 @@ weekWeather.forEach(function(i, index, element){
             {
                 day:day_text,
                 img: element[index].weather[0].icon,
-                d_max: element[index].main.temp_max,
-                d_min: element[index].main.temp_min,
-                now: element[index].main.temp_kf,
+                d_max: (element[index].main.temp_max - 273.15).toFixed(0),
+                d_min: (element[index].main.temp_min - 273.15).toFixed(0),
+                now: (element[index].main.temp - 273.15).toFixed(0),
                 id: index
             },
         );
